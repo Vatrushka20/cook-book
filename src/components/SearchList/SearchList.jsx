@@ -14,13 +14,12 @@ export const SearchList = () => {
         return favorites.some((meal) => meal.idMeal === idMeal);
     }
 
-    if (!meal) return <p className='warning'>No results. Try another...</p>
+    if (!meal) return <p className='warning'>No results. Try something else...</p>
 
     return (
         <div className='search-recipe wrapper'>
             <div className='search-recipe__meals'>
-                {meal ? (
-                    meal.slice(firstPostIndex, lastPostIndex).map((meal) => (
+                {meal.length > 0 ? meal.slice(firstPostIndex, lastPostIndex).map((meal) => (
                         <SearchRecipeItem
                             key={meal.idMeal}
                             img={meal.strMealThumb}
@@ -37,9 +36,9 @@ export const SearchList = () => {
                                              onClick={() => addToFavorites(meal)}/>)
                             }
                         />
-                    ))
+                    )
                 ) : (
-                    <h1 className='warning'>No results. Try another...</h1>
+                    <h1 className='warning'>No results. Try to type something...</h1>
                 )}
             </div>
             <Pagination
