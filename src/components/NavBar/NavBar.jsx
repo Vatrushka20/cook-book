@@ -5,7 +5,6 @@ import {SearchInput} from "../SearchInput/SearchInput";
 import {useContext, useState} from "react";
 import {MyContext} from "../../context/context";
 import Burger from "../Burger/Burger";
-import {motion} from "framer-motion";
 
 export const NavBar = () => {
     const [searchTerm, setSearchTerm] = useState("");
