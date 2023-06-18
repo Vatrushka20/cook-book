@@ -1,0 +1,44 @@
+{
+  "culinary": [
+    {
+      "id": 0,
+      "recommendation": "“ Elevate your morning routine with a homemade batch of fluffy pancakes, topped with fresh fruits and a drizzle of maple syrup.”"
+    },
+    {
+      "id": 1,
+      "recommendation": "“ Take your grilling game to the next level with a marinated skirt steak, perfectly charred and juicy, served with grilled veggies on the side.”"
+    },
+    {
+      "id": 2,
+      "recommendation": "“ Explore the world of vegetarian cuisine by experimenting with hearty and flavorful plant-based recipes like stuffed bell peppers or lentil curry.”"
+    },
+    {
+      "id": 3,
+      "recommendation": "“ Treat yourself to a decadent dessert by whipping up a rich and velvety chocolate mousse with a hint of espresso for a delightful twist.”"
+    },
+    {
+      "id": 4,
+      "recommendation": "“ Expand your culinary horizons by trying your hand at sushi rolling—crafting your own sushi rolls with fresh fish, vibrant veggies, and creamy avocado.”"
+    },
+    {
+      "id": 5,
+      "recommendation": "“ Dive into the world of homemade pasta by making pillowy gnocchi from scratch, paired with a creamy sauce or tossed in a flavorful pesto.”"
+    },
+    {
+      "id": 6,
+      "recommendation": "“ Get creative in the kitchen by experimenting with fusion cuisine, like combining the flavors of Mexican and Asian cuisine in a mouthwatering taco with a twist.”"
+    },
+    {
+      "id": 7,
+      "recommendation": "“ Celebrate the flavors of the Mediterranean by preparing a vibrant Greek salad with juicy tomatoes, crisp cucumbers, briny olives, and creamy feta cheese.”"
+    },
+    {
+      "id": 8,
+      "recommendation": "“ Warm your soul with a comforting bowl of homemade chicken noodle soup, simmered to perfection with aromatic herbs and tender vegetables.”"
+    },
+    {
+      "id": 9,
+      "recommendation": "“ Delight your guests with a showstopping dessert like a classic crème brûlée, with its creamy custard base and caramelized sugar topping that cracks under your spoon.”"
+    }
+  ]
+}

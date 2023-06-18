@@ -1,0 +1,109 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+@import "src/styles/responsive";
+
+.footer {
+  padding-bottom: 30px;
+  background-color: $bg-color;
+  @include md {
+    padding-bottom: 10px;
+  }
+
+  &__content {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @include cwd(640px) {
+      flex-direction: column;
+    }
+    @include cwd(425px) {
+      gap: 0;
+    }
+
+    .left-content {
+      margin-top: 60px;
+      @include md {
+        margin-top: 35px;
+      }
+      @include cwd(640px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        width: 300px;
+        padding-bottom: 15px;
+
+        @include md {
+          width: 250px;
+        }
+      }
+
+      .description {
+        @include fonts('Montserrat', 500, 18px, $light-gray);
+        text-align: left;
+        max-width: 470px;
+        @include md {
+          font-size: 16px;
+        }
+        @include cwd(640px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid $orange;
+    @include md {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding-top: 15px;
+    }
+
+    .copy-info {
+      @include fonts('Montserrat', 500, 16px, $light-gray);
+
+      @include cwd(835px) {
+        font-size: 14px;
+        padding-right: 0;
+      }
+    }
+
+    .creator {
+      @include fonts('Montserrat', 500, 16px, $light-gray);
+      padding-right: 60px;
+      @include cwd(950px) {
+        padding-right: 0;
+      }
+      @include cwd(835px) {
+        font-size: 14px;
+        padding-right: 0;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      gap: 7px;
+
+      &__icon {
+        cursor: pointer;
+
+        @include cwd(835px) {
+          font-size: 28px;
+        }
+
+        &:hover {
+          fill: $orange;
+        }
+      }
+    }
+  }
+}

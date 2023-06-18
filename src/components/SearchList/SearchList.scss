@@ -1,0 +1,29 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.search-recipe {
+  &__meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    border-radius: 10px;
+
+    &__img {
+      border-radius: 10px;
+      width: 240px;
+      transition: all .6s ease-in-out;
+    }
+
+    &__category {
+      @include fonts('Montserrat', 500, 16px, $dark-gray);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 2px 5px;
+      color: $light-gray;
+      border-radius: 10px;
+    }
+  }
+}
+

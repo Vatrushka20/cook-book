@@ -1,0 +1,239 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+@import "src/styles/responsive";
+
+.home {
+  .banner {
+    margin-top: -90px;
+    background-image: url('/assets/banner/food-3-min.jpeg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include md {
+      margin-top: -80px;
+    }
+
+    &__content {
+      &__title {
+        @include fonts('Courgette', 800, 50px, $dark-gray);
+        font-style: italic;
+        line-height: 60px;
+        padding-top: 200px;
+        max-width: 700px;
+        @include cwd(820px) {
+          padding-top: 150px;
+        }
+        @include md {
+          font-size: 45px;
+        }
+        @include cwd(650px) {
+          padding-top: 120px;
+          font-size: 42px;
+          line-height: 50px;
+        }
+        @include cwd(425px) {
+          padding-top: 100px;
+          font-size: 40px;
+        }
+
+        @include cwd(375px) {
+          font-size: 36px;
+          line-height: 45px;
+        }
+      }
+
+      &__description {
+        @include fonts('Montserrat', 400, 20px, $dark-gray);
+        line-height: 20px;
+        padding-top: 20px;
+        max-width: 700px;
+        @include cwd(1120px) {
+          max-width: 600px;
+        }
+        @include md {
+          font-size: 18px;
+          max-width: 500px;
+        }
+        @include cwd(650px) {
+          font-size: 17px;
+          max-width: 400px;
+        }
+        @include cwd(460px) {
+          font-size: 16px;
+          max-width: 350px;
+        }
+        @include cwd(375px) {
+          font-size: 15px;
+          max-width: 300px;
+        }
+      }
+
+      .btn-banner {
+        margin-top: 30px;
+      }
+    }
+
+    .scroll-down {
+      cursor: pointer;
+      position: absolute;
+      z-index: 1;
+      bottom: 40px;
+      left: 50%;
+
+      .arrow {
+        animation: jump-arrow 2.5s infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  &__meals {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__about-us {
+    .title {
+      padding-bottom: 20px;
+      margin-top: 100px;
+      @include xl {
+        margin-top: 80px;
+      }
+      @include md {
+        margin-top: 60px;
+      }
+      @include cwd(500px) {
+        margin-top: 50px;
+      }
+    }
+
+    .description {
+      padding-bottom: 15px;
+    }
+
+    .border {
+      border-top: 1px solid $orange;
+      width: 250px;
+      margin: 30px auto 10px;
+      @include cwd(500px) {
+        width: 200px;
+        margin: 20px auto 10px;
+      }
+    }
+
+    &__footer {
+      @include fonts('Courgette', 600, 25px, $dark-gray);
+      text-align: center;
+      margin-bottom: 100px;
+      @include xl {
+        margin-bottom: 80px;
+      }
+      @include md {
+        margin-bottom: 60px;
+      }
+      @include cwd(680px) {
+        font-size: 23px;
+      }
+
+      @include cwd(500px) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .facts-about-food {
+    background-color: $bg-color;
+    padding: 50px 0;
+    margin-bottom: 70px;
+
+    .swiper {
+      margin-top: 20px;
+      @include cwd(550px){
+        margin-top: 30px;
+      }
+
+      .swiper-slide {
+        position: relative;
+        height: 200px;
+        margin-right: 0;
+        @include cwd(425px){
+          height: 250px;
+        }
+
+        .description {
+          @include fonts('Caveat', 300, 28px, $dark-gray);
+          font-style: italic;
+          line-height: 30px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 500px;
+          margin: 0 auto;
+          @include md{
+            font-size: 26px;
+          }
+
+          @include cwd(475px){
+            font-size: 24px;
+            line-height: 28px;
+          }
+
+          @include cwd(345px){
+           line-height: 26px;
+            font-size: 23px;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        color: $orange;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+
+      .swiper-button-next {
+        color: $orange;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
+
+@keyframes jump-arrow {
+  0%,
+  20%,
+  55%,
+  80%,
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  40% {
+    transform: translate3d(-50%, -15px, 0);
+  }
+
+  70% {
+    transform: translate3d(-50%, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(-50%, -5px, 0);
+  }
+}

@@ -1,0 +1,17 @@
+@import "src/styles/responsive";
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+
+  @include xl {
+    margin-bottom: 80px;
+  }
+  @include md {
+    margin-bottom: 60px;
+  }
+  @include cwd(500px) {
+    margin-bottom: 50px;
+  }
+}

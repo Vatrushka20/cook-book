@@ -1,0 +1,15 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+.latest-recipes {
+  .title {
+    padding-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,56 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+@import "src/styles/responsive";
+
+.burger-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  height: 100%;
+  cursor: pointer;
+  width: 35px;
+  background-color: transparent;
+  @include cwd(500px) {
+    width: 30px;
+    gap: 6px;
+  }
+
+  .burger {
+    position: relative;
+    width: 35px;
+    height: 3px;
+    background-color: $orange;
+    @include cwd(500px) {
+      width: 30px;
+    }
+
+    &.clicked {
+      &:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+        transition: ease-out .5s;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+        transition: ease-out .5s;
+        @include cwd(500px) {
+          transform: translateY(-6px) rotate(45deg);
+        }
+      }
+    }
+
+    &.unclicked {
+      transform: rotate(0) translate(0);
+      transition: ease-out .5s;
+    }
+  }
+
+  @include md {
+    display: flex;
+  }
+}

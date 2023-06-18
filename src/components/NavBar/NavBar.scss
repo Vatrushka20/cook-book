@@ -1,0 +1,95 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+@import "src/styles/responsive";
+
+.nav-bar {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: $bg-color;
+  margin-bottom: 30px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    @include md {
+      height: 55px;
+    }
+    @include cwd(500px) {
+      height: 50px;
+    }
+
+    .logo {
+      cursor: pointer;
+      width: 280px;
+      @include cwd(1050px) {
+        width: 220px;
+        margin-top: 3px;
+      }
+      @include cwd(880px) {
+        width: 190px;
+      }
+      @include cwd(500px) {
+        width: 160px;
+        margin-top: 5px;
+      }
+      @include cwd(425px) {
+        width: 140px;
+      }
+    }
+
+    .navigation {
+      .list {
+        display: flex;
+        gap: 30px;
+        padding: 0;
+        @include cwd(1050px) {
+          gap: 15px;
+        }
+
+        .item {
+          cursor: pointer;
+          @include fonts('Montserrat', 700, 19px, $dark-gray);
+          @include cwd(880px) {
+            font-size: 17px;
+          }
+
+          &:hover {
+            color: $orange;
+          }
+        }
+
+        @include md {
+          position: absolute;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-top: 2px solid $orange;
+          width: 100%;
+          left: 50%;
+          transform: translate(-50%);
+          top: 100%;
+          background-color: $bg-color;
+          padding: 10px 0 20px;
+          .item {
+            padding: 10px 0;
+          }
+        }
+      }
+
+      @include md {
+        &.hidden {
+          display: none;
+        }
+
+        &.visible {
+          display: inherit;
+        }
+      }
+    }
+  }
+}

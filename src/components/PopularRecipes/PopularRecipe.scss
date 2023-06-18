@@ -1,0 +1,15 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+.popular-recipes {
+  .title {
+    padding-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+}

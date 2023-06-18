@@ -1,0 +1,80 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.recipe-container {
+  position: relative;
+
+  .recipe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $bg-color;
+    padding: 10px 10px 10px;
+    width: 205px;
+    border-radius: 10px;
+
+    &__img {
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all .6s ease-in-out;
+    }
+
+    &__tag {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: center;
+      margin-top: 5px;
+
+      .tag-settings {
+        @include fonts('Montserrat', 500, 14px, $light-gray);
+        padding: 2px 5px;
+        border-radius: 2px;
+        text-align: center;
+        background-color: $bg-color;
+      }
+    }
+
+    &__title {
+      @include fonts('Montserrat', 700, 19px, $dark-gray);
+      padding-top: 5px;
+      text-align: center;
+    }
+
+    &__button {
+      cursor: pointer;
+      @include fonts('Montserrat', 400, 16px, $base-white);
+      font-size: 16px;
+      border: 1px solid $orange;
+      background-color: $orange;
+      margin-top: 5px;
+      padding: 3px 8px;
+      border-radius: 5px;
+
+      &:hover {
+        border: 1px solid $orange;
+        color: $orange;
+        background-color: $base-white;
+      }
+
+      &:active {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .favorite-container {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+

@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+@import "src/styles/responsive";
+.recipe-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $bg-color;
+  padding: 10px 10px 10px;
+  width: 225px;
+  border-radius: 10px;
+  @include md{
+    width: 200px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  .favorite-container {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .6s ease-in-out;
+  }
+
+  &__title {
+    @include fonts('Montserrat', 600, 19px, $dark-gray);
+    padding-top: 5px;
+    text-align: center;
+    @include md{
+      font-size: 17px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+@import "src/styles/responsive";
+
+.search {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    .search__input {
+      border: 1px solid $orange;
+      background-color: $base-white;
+      color: $orange;
+
+      &::placeholder {
+        color: $orange;
+      }
+    }
+
+    .search__button {
+      stroke: $orange;
+    }
+  }
+
+  &__input {
+    @include fonts('  Montserrat', 500, 16px, $base-white);
+    padding: 8px 10px;
+    border-radius: 8px;
+   width: 200px;
+    border: 1px solid $orange;
+    background-color: $orange;
+    @include cwd(1050px) {
+      width: 150px;
+    }
+    @include cwd(880px) {
+      padding: 5px 8px;
+    }
+    @include cwd(500px) {
+      width: 130px;
+      font-size: 14px;
+    }
+    @include cwd(425px) {
+      width: 100px;
+    }
+
+    &::placeholder {
+      color: $base-white;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    cursor: pointer;
+    @include cwd(880px) {
+    top: 7px;
+    }
+    @include cwd(500px) {
+     top: 5px;
+    }
+  }
+}
