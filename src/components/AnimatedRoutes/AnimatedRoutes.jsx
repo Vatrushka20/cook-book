@@ -15,9 +15,9 @@ const AnimatedRoutes = () => {
                 <Route exact path='/' element={<HomePage className='wrapper'/>}/>
                 <Route path='/categories/' element={<CategoriesPage className='wrapper'/>}/>
                 <Route path='/favorites' element={<Favorites className='wrapper'/>}/>
-                <Route path={"/full-recipe/:id"} element={<FullRecipe className='wrapper'/>}/>
-                <Route path={"/full-recipe/random"} element={<FullRecipe className='wrapper'/>}/>
-                <Route path={"/search"} element={<SearchList className='wrapper'/>}/>
+                <Route path="/full-recipe/:id" element={<FullRecipe className='wrapper'/>}/>
+                <Route path="/full-recipe/random" element={<FullRecipe className='wrapper'/>}/>
+                <Route path="/search" element={<SearchList className='wrapper'/>}/>
             </Routes>
         </AnimatePresence>
     );
