@@ -12,7 +12,7 @@ const AnimatedRoutes = () => {
     return (
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                <Route exact path='/' element={<HomePage className='wrapper'/>}/>
+                <Route exact path='/cook-book' element={<HomePage className='wrapper'/>}/>
                 <Route path='/cook-book/categories/' element={<CategoriesPage className='wrapper'/>}/>
                 <Route path='/cook-book/favorites' element={<Favorites className='wrapper'/>}/>
                 <Route path={"/cook-book/full-recipe/:id"} element={<FullRecipe className='wrapper'/>}/>
