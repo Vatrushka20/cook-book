@@ -14,6 +14,8 @@ export const SearchList = () => {
         return favorites.some((meal) => meal.idMeal === idMeal);
     }
 
+    if (!meal) return <p className='warning'>No results. Try another...</p>
+
     return (
         <div className='search-recipe wrapper'>
             <div className='search-recipe__meals'>
