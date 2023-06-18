@@ -39,7 +39,7 @@
         transform: translateY(-12px) rotate(45deg);
         transition: ease-out .5s;
         @include cwd(500px) {
-          transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-10px) rotate(45deg);
         }
       }
     }
