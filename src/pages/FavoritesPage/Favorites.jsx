@@ -1,5 +1,5 @@
 import './Favorites.scss';
-import RecipeCard from "../RecipeCard/RecipeCard";
+import RecipeCard from "../../components/RecipeCard/RecipeCard";
 import {IoHeart} from "react-icons/io5";
 import {useFavorites} from "../../hooks/useFavorites";
 import {motion} from "framer-motion";
@@ -27,9 +27,6 @@ export const Favorites = () => {
                                 opacity: 1,
                             },
                         }}
-                 // initial={{opacity: 0}}
-                 // animate={{opacity: 1}}
-                 // exit={{opacity: 0}}
             >
                 {favorites.length > 0 ? favorites.map((meal) => (
                     <RecipeCard className='favorites'

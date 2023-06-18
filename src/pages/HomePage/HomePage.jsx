@@ -1,6 +1,6 @@
 import './HomePage.scss';
-import {LatestRecipes} from "../LatestRecipes/LatestRecipes";
-import {PopularRecipe} from "../PopularRecipes/PopularRecipe";
+import {LatestRecipes} from "../../components/LatestRecipes/LatestRecipes";
+import {PopularRecipe} from "../../components/PopularRecipes/PopularRecipe";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -55,9 +55,6 @@ export const HomePage = () => {
                             opacity: 1,
                         },
                     }}
-                    // initial={{opacity: 0}}
-                    // animate={{opacity: 1}}
-                    // exit={{opacity: 0}}
         >
             <div className='banner'>
                 <div className='banner__content wrapper'>

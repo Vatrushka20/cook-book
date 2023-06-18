@@ -40,9 +40,6 @@ export const FullRecipe = (props) => {
                             opacity: 1,
                         },
                     }}
-            // initial={{opacity: 0}}
-            // animate={{opacity: 1}}
-            // exit={{opacity: 0}}
         >
             {fullRecipe ? (
                 <div className='full-recipe__list wrapper' key={fullRecipe.idMeal}>

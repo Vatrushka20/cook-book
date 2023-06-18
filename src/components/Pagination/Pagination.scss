@@ -1,5 +1,6 @@
 @import "src/styles/variables";
 @import "src/styles/mixins";
+@import "src/styles/responsive";
 
 .pagination {
   display: flex;
@@ -16,6 +17,10 @@
     width: 30px;
     text-align: center;
     border-radius: 50%;
+    @include md {
+      height: 25px;
+      width: 25px;
+    }
 
     &:hover {
       background-color: white;

@@ -1,10 +1,10 @@
 import './CategoriesPage.scss'
 import React, {useContext, useEffect} from "react";
 import {MyContext} from "../../context/context";
-import RecipeCard from "../RecipeCard/RecipeCard";
+import RecipeCard from "../../components/RecipeCard/RecipeCard";
 import {IoHeart} from "react-icons/io5";
 import {useFavorites} from "../../hooks/useFavorites";
-import {Pagination} from "../Pagination/Pagination";
+import {Pagination} from "../../components/Pagination/Pagination";
 import {motion} from "framer-motion";
 
 export const CategoriesPage = (props) => {
@@ -23,7 +23,7 @@ export const CategoriesPage = (props) => {
 
     useEffect(() => {
         fetchCategories();
-    }, [categories])
+    }, [fetchCategories])
 
     return (
         <>

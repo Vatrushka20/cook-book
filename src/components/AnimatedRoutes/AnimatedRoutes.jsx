@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route, Routes, useLocation} from "react-router-dom";
-import {HomePage} from "../HomePage/HomePage";
-import {CategoriesPage} from "../CategoriesPage/CategoriesPage";
-import {Favorites} from "../FavoritesPage/Favorites";
+import {HomePage} from "../../pages/HomePage/HomePage";
+import {CategoriesPage} from "../../pages/CategoriesPage/CategoriesPage";
+import {Favorites} from "../../pages/FavoritesPage/Favorites";
 import {FullRecipe} from "../FullRecipe/FullRecipe";
 import {SearchList} from "../SearchList/SearchList";
 import {AnimatePresence} from "framer-motion";
