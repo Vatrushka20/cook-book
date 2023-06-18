@@ -37,23 +37,23 @@ export const NavBar = () => {
     return (
         <div id='header' className='nav-bar'>
             <div className='content wrapper'>
-                <Link to='/cook-book'>
+                <Link to='/'>
                     <img className='logo' src={logo} alt='logo'/>
                 </Link>
                 <header>
                     <nav className={menuClass}>
                         <ul className='list'>
                             <li className='item'>
-                                <Link to={'/cook-book'}>Home</Link>
+                                <Link to={'/'}>Home</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/cook-book/categories'}>Categories</Link>
+                                <Link to={'/categories'}>Categories</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/cook-book/full-recipe/random'}>Random</Link>
+                                <Link to={'/full-recipe/random'}>Random</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/cook-book/favorites'}>Favorites</Link>
+                                <Link to={'/favorites'}>Favorites</Link>
                             </li>
                         </ul>
                     </nav>
