@@ -36,14 +36,14 @@ export const NavBar = () => {
     return (
         <div id='header' className='nav-bar'>
             <div className='content wrapper'>
-                <Link to='/home'>
+                <Link to='/'>
                     <img className='logo' src={logo} alt='logo'/>
                 </Link>
                 <header>
                     <nav className={menuClass}>
                         <ul className='list'>
                             <li className='item'>
-                                <Link to={'/home'}>Home</Link>
+                                <Link to={'/'}>Home</Link>
                             </li>
                             <li className='item'>
                                 <Link to={'/categories'}>Categories</Link>

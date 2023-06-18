@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes, useLocation, redirect} from "react-router-dom";
+import {Route, Routes, useLocation} from "react-router-dom";
 import {HomePage} from "../../pages/HomePage/HomePage";
 import {CategoriesPage} from "../../pages/CategoriesPage/CategoriesPage";
 import {Favorites} from "../../pages/FavoritesPage/Favorites";
@@ -11,8 +11,7 @@ const AnimatedRoutes = () => {
     return (
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                <Route path="/" render={() => <redirect to="/home" />} />
-                <Route exact path='/home' element={<HomePage className='wrapper'/>}/>
+                <Route exact path='/' element={<HomePage className='wrapper'/>}/>
                 <Route path='/categories/' element={<CategoriesPage className='wrapper'/>}/>
                 <Route path='/favorites' element={<Favorites className='wrapper'/>}/>
                 <Route path="/full-recipe/:id" element={<FullRecipe className='wrapper'/>}/>
