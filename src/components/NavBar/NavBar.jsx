@@ -48,16 +48,16 @@ export const NavBar = () => {
                     <nav className={menuClass}>
                         <ul className='list'>
                             <li className='item'>
-                                <Link to={'/'}>Home</Link>
+                                <Link to={'/cook-book'}>Home</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/categories'}>Categories</Link>
+                                <Link to={'/cook-book/categories'}>Categories</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/full-recipe/random'}>Random</Link>
+                                <Link to={'/cook-book/full-recipe/random'}>Random</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/favorites'}>Favorites</Link>
+                                <Link to={'/cook-book/favorites'}>Favorites</Link>
                             </li>
                         </ul>
                     </nav>
