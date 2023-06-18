@@ -33,15 +33,11 @@ export const NavBar = () => {
         }
         setIsMenuClicked(!isMenuClicked)
     }
-    const variants = {
-        open: { opacity: 1, x: 0 },
-        closed: { opacity: 0, x: "-100%" },
-    }
 
     return (
         <div id='header' className='nav-bar'>
             <div className='content wrapper'>
-                <Link to='/'>
+                <Link to='/cook-book'>
                     <img className='logo' src={logo} alt='logo'/>
                 </Link>
                 <header>
