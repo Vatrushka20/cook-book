@@ -1,5 +1,5 @@
 import './LatestRecipes.scss';
-import React, { useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {ButtonLess} from "../Button/ButtonLess/ButtonLess";
 import {ButtonMore} from "../Button/ButtonMore/ButtonMore";
@@ -10,16 +10,28 @@ import {useFavorites} from "../../hooks/useFavorites";
 export const LatestRecipes = () => {
         const [latestRecipe, setLatestRecipe] = useState([]);
         const [itemsToShow, setItemsToShow] = useState(10);
-    const {favorites, addToFavorites, removeFromFavorites} = useFavorites();
+        const {favorites, addToFavorites, removeFromFavorites} = useFavorites();
         const favoritesChecker = (idMeal) => {
-        return favorites.some((meal) => meal.idMeal === idMeal);
-    }
+            return favorites.some((meal) => meal.idMeal === idMeal);
+        }
         const showMoreItems = () => {
             setItemsToShow(itemsToShow.length)
         }
         const showLess = () => {
             setItemsToShow(10);
         }
+
+        const handleClickScroll = () => {
+            const element = document.getElementById('latest-recipe');
+            if (element) {
+                element.scrollIntoView({behavior: 'auto'});
+            }
+        };
+        const onLessClick = () => {
+            showLess();
+            handleClickScroll();
+        };
+
         useEffect(() => {
             const getLatestRecipe = async () => {
                 const data = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian`)
@@ -45,10 +57,10 @@ export const LatestRecipes = () => {
                                     children={favoritesChecker(item.idMeal)
                                         ? (
                                             <IoHeart color="red" fontSize='35px'
-                                                         onClick={() => removeFromFavorites(item.idMeal)}/>
+                                                     onClick={() => removeFromFavorites(item.idMeal)}/>
                                         ) : (
                                             <IoHeart color="white" fontSize='35px'
-                                                         onClick={() => addToFavorites(item)}/>)
+                                                     onClick={() => addToFavorites(item)}/>)
                                     }
                                 />
                             ))
@@ -57,7 +69,7 @@ export const LatestRecipes = () => {
                         )}
                     </div>
                 </div>
-                {(itemsToShow === 10) ? <ButtonMore onClick={showMoreItems}/> : <ButtonLess onClick={showLess}/>}
+                {(itemsToShow === 10) ? <ButtonMore onClick={showMoreItems}/> : <ButtonLess onClick={onLessClick}/>}
             </>
         );
     }

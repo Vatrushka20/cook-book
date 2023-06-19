@@ -20,6 +20,17 @@ export const PopularRecipe = () => {
     const showLess = () => {
         setItemsToShow(10);
     };
+    const handleClickScroll = () => {
+        const element = document.getElementById('popular-recipe');
+        if (element) {
+            element.scrollIntoView({behavior: 'auto'});
+        }
+    };
+
+    const onLessClick = () => {
+        showLess();
+        handleClickScroll();
+    };
 
     useEffect(() => {
         const getPopularRecipe = async () => {
@@ -56,7 +67,7 @@ export const PopularRecipe = () => {
             {itemsToShow === 10 ? (
                 <ButtonMore onClick={showMore} />
             ) : (
-                <ButtonLess onClick={showLess} />
+                <ButtonLess onClick={onLessClick} />
             )}
         </>
     );

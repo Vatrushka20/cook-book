@@ -69,9 +69,10 @@ export const HomePage = () => {
                     </div>
                 </div>
             </div>
+
             <div id='about-us'></div>
 
-            <div id='about-us' className='home__about-us wrapper'>
+            <div className='home__about-us wrapper'>
                 <h2 className='title'>About us</h2>
                 <p className='description'>Welcome to our cooking website, a dedicated platform created
                     to inspire and educate food enthusiasts of all levels. We are passionate about the art of
@@ -88,7 +89,7 @@ export const HomePage = () => {
                     our
                     website is designed to cater to your needs..</p>
                 <div className='border'></div>
-                <h2 className='home__about-us__footer'>Happy cooking!</h2>
+                <h2 id='popular-recipe' className='home__about-us__footer'>Happy cooking!</h2>
             </div>
             <PopularRecipe/>
 
@@ -110,6 +111,7 @@ export const HomePage = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                <div id='latest-recipe' ></div>
             </div>
             <LatestRecipes/>
         </motion.div>
