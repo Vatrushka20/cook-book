@@ -3,9 +3,13 @@ import RecipeCard from "../../components/RecipeCard/RecipeCard";
 import {IoHeart} from "react-icons/io5";
 import {useFavorites} from "../../hooks/useFavorites";
 import {motion} from "framer-motion";
+import React, {useContext} from "react";
+import {MyContext} from "../../context/context";
+import {Pagination} from "../../components/Pagination/Pagination";
 
 export const Favorites = () => {
     const {favorites, addToFavorites, removeFromFavorites} = useFavorites();
+    const {lastPostIndex, firstPostIndex, currentPage, postsPerPage, setCurrentPage} = useContext(MyContext);
     const favoritesChecker = (idMeal) => {
         return favorites.some((meal) => meal.idMeal === idMeal);
     }
@@ -28,7 +32,7 @@ export const Favorites = () => {
                             },
                         }}
             >
-                {favorites.length > 0 ? favorites.map((meal) => (
+                {favorites.length > 0 ? favorites.slice(firstPostIndex, lastPostIndex).map((meal) => (
                     <RecipeCard className='favorites'
                                 key={meal.idMeal}
                                 onClick={() => addToFavorites(meal)}
@@ -48,6 +52,8 @@ export const Favorites = () => {
                     <h1 className='warning'>You don't have favorite recipes yet!</h1>
                 )}
             </motion.div>
+            <Pagination totalPosts={favorites.length} postsPerPage={postsPerPage} currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}/>
         </>
     )
 }

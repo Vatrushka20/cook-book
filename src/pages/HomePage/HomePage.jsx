@@ -111,7 +111,7 @@ export const HomePage = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div id='latest-recipe' ></div>
+                <div id='latest-recipe'></div>
             </div>
             <LatestRecipes/>
         </motion.div>

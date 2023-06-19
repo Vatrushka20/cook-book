@@ -6,14 +6,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  @include md {
-    gap: 8px;
-  }
+  gap: 8px;
 
   &__item {
     .item-title {
-      @include fonts('Montserrat', 400, 18px, $base-white);
+      @include fonts('Montserrat', 400, 17px, $base-white);
       cursor: pointer;
       display: flex;
       flex-direction: column;
