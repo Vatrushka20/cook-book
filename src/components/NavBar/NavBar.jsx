@@ -36,7 +36,7 @@ export const NavBar = () => {
     return (
         <div id='header' className='nav-bar'>
             <div className='content wrapper'>
-                <Link onClick={updateMenu} to='/'>
+                <Link to='/'>
                     <img className='logo' src={logo} alt='logo'/>
                 </Link>
                 <header>
