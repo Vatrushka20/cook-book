@@ -8,6 +8,7 @@ import {SearchList} from "../SearchList/SearchList";
 import {AnimatePresence} from "framer-motion";
 const AnimatedRoutes = () => {
     const location = useLocation();
+
     return (
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>

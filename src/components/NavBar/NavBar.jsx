@@ -23,10 +23,10 @@ export const NavBar = () => {
     const [isMenuClicked, setIsMenuClicked] = useState(false)
 
     const updateMenu = () => {
-        if(!isMenuClicked){
+        if (!isMenuClicked) {
             setBurgerClass('burger clicked');
             setMenuClass('navigation visible')
-        } else{
+        } else {
             setBurgerClass('burger unclicked');
             setMenuClass('navigation hidden')
         }
@@ -36,23 +36,23 @@ export const NavBar = () => {
     return (
         <div id='header' className='nav-bar'>
             <div className='content wrapper'>
-                <Link to='/'>
+                <Link onClick={updateMenu} to='/'>
                     <img className='logo' src={logo} alt='logo'/>
                 </Link>
                 <header>
                     <nav className={menuClass}>
                         <ul className='list'>
                             <li className='item'>
-                                <Link to={'/'}>Home</Link>
+                                <Link onClick={updateMenu} to={'/'}>Home</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/categories'}>Categories</Link>
+                                <Link onClick={updateMenu} to={'/categories'}>Categories</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/full-recipe/random'}>Random</Link>
+                                <Link onClick={updateMenu} to={'/full-recipe/random'}>Random</Link>
                             </li>
                             <li className='item'>
-                                <Link to={'/favorites'}>Favorites</Link>
+                                <Link onClick={updateMenu} to={'/favorites'}>Favorites</Link>
                             </li>
                         </ul>
                     </nav>
@@ -71,7 +71,6 @@ export const NavBar = () => {
                     className={burgerClass}
                     onClick={updateMenu}
                 />
-
             </div>
         </div>
     )
